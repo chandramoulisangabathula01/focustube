@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusTube - Thumbnail Hider & Distraction-Free Browsing</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="icons/icon128.png" alt="FocusTube Logo" class="logo">
+        <h1>FocuxTube</h1>
+      </div>
+      <p class="subtitle">Thumbnail Hider & Distraction-Free Browsing</p>
+    </header>
+
+    <main>
+      <section class="option-group">
+        <h2>Thumbnail Controls</h2>
+        <label class="toggle" for="hideThumbnails">
+          <div class="toggle-content">
+            <span class="toggle-title">Hide Thumbnails</span>
+            <span class="toggle-description">Completely hide all video thumbnails</span>
+          </div>
+          <input type="checkbox" id="hideThumbnails">
+          <span class="slider"></span>
+        </label>
+
+        <label class="toggle" for="blurThumbnails">
+          <div class="toggle-content">
+            <span class="toggle-title">Blur Thumbnails</span>
+            <span class="toggle-description">Reduce thumbnail visibility</span>
+          </div>
+          <input type="checkbox" id="blurThumbnails">
+          <span class="slider"></span>
+        </label>
+
+        <label class="toggle" for="solidColor">
+          <div class="toggle-content">
+            <span class="toggle-title">Solid Color</span>
+            <span class="toggle-description">Replace thumbnails with neutral color</span>
+          </div>
+          <input type="checkbox" id="solidColor">
+          <span class="slider"></span>
+        </label>
+      </section>
+
+      <section class="option-group">
+        <h2>Interface Settings</h2>
+        <label class="toggle" for="distractionFree">
+          <div class="toggle-content">
+            <span class="toggle-title">Distraction-Free Mode</span>
+            <span class="toggle-description">Hide related videos and comments</span>
+          </div>
+          <input type="checkbox" id="distractionFree">
+          <span class="slider"></span>
+        </label>
+      </section>
+    </main>
+
+    <footer>
+      <button id="save" class="primary-button">Save Changes</button>
+      <button id="help" class="secondary-button">Help Guide</button>
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

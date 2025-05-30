@@ -1,0 +1,327 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+:root {
+  /* Primary Colors */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #EDE9FE;  /* Light Purple */
+  
+  /* Background Colors */
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --secondary-bg: #F3F4F6;
+  
+  /* Text Colors */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-tertiary: #9CA3AF;
+  
+  /* Accent Colors */
+  --accent-success: #10B981;  /* Emerald */
+  --accent-warning: #F59E0B;  /* Amber */
+  --accent-error: #EF4444;    /* Red */
+  
+  /* Border & Shadow */
+  --border-color: #e2e8f0;
+  --toggle-bg: #e2e8f0;
+  --toggle-active: #34c759; /* iOS-like green */
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --success-color: #10b981;
+  --header-height: 60px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+/* Logo & Branding */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 60px; /* Increased logo size */
+  height: 60px; /* Increased logo size */
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Updated Container Styles */
+.container {
+  background: var(--card-background);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 16px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+/* Updated Header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px 0 16px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.logo {
+  width: 48px; /* Increased logo size */
+  height: 48px; /* Increased logo size */
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 24px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+  text-align: center;
+}
+
+/* Updated Option Group Styles */
+.option-group {
+  background: var(--card-background);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--text-primary);
+}
+
+/* Updated Toggle Styles */
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.toggle:last-child {
+  border-bottom: none;
+}
+
+.toggle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toggle-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.toggle-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* iOS-style toggle switch */
+.slider {
+  position: relative;
+  width: 51px;
+  height: 31px;
+  background: var(--toggle-bg);
+  border-radius: 31px;
+  transition: background-color 0.2s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background: var(--toggle-active);
+}
+
+input[type="checkbox"]:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* iOS-style Buttons */
+footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0 16px 16px;
+}
+
+.primary-button, .secondary-button {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.primary-button {
+  background: var(--primary-color);
+  color: white;
+}
+
+.primary-button:hover {
+  background: var(--primary-hover);
+}
+
+.secondary-button {
+  background: var(--background-color);
+  color: var(--primary-color);
+}
+
+.secondary-button:hover {
+  background: #f1f5f9;
+}
+
+/* Help page specific styles */
+.help-content {
+  display: grid;
+  gap: 20px;
+}
+
+.feature-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.feature-card h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Updates */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000000;
+    --card-background: #1c1c1e;
+    --secondary-bg: #374151;
+    --text-primary: #ffffff;
+    --text-secondary: #98989f;
+    --text-tertiary: #9CA3AF;
+    --border-color: #2c2c2e;
+    --toggle-bg: #3a3a3c;
+    --primary-light: rgba(124, 58, 237, 0.2);
+  }
+  
+  .secondary-button {
+    background: #2c2c2e;
+    color: var(--primary-color);
+  }
+  
+  .secondary-button:hover {
+    background: #3a3a3c;
+  }
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 24px;
+  }
+  
+  .option-group {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: var(--card-background);
+  }
+  
+  .container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
